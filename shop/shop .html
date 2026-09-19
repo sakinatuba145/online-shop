@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> shop</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 font-sans">
+
+<!-- Top Navbar -->
+<nav class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-sm">🛍️</span>
+      <span class="font-bold text-slate-800 md:text-lg">Amir Online Shop</span>
+    </div>
+
+    <div class="hidden md:flex items-center gap-8 text-sm text-slate-600 font-medium">
+      <a href="#" class="text-blue-600">Home</a>
+      <a href="#" class="hover:text-blue-600">Shop</a>
+      <a href="#" class="hover:text-blue-600">Categories</a>
+      <a href="#" class="hover:text-blue-600">Deals</a>
+      <a href="#" class="hover:text-blue-600">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button class="hidden sm:flex w-9 h-9 rounded-full bg-slate-100 items-center justify-center">
+        <svg class="w-4 h-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="relative w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center">
+        <svg class="w-4 h-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="absolute -top-1 -right-1 bg-blue-600 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">3</span>
+      </button>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center">
+        <svg class="w-4 h-4 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 px-6 py-3">
+    <a href="#" class="block py-2 text-sm font-medium text-blue-600">Home</a>
+    <a href="#" class="block py-2 text-sm font-medium text-slate-600">Shop</a>
+    <a href="#" class="block py-2 text-sm font-medium text-slate-600">Categories</a>
+    <a href="#" class="block py-2 text-sm font-medium text-slate-600">Deals</a>
+    <a href="#" class="block py-2 text-sm font-medium text-slate-600">Contact</a>
+  </div>
+</nav>
+
+<div class="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto min-h-screen relative pb-28">
+
+  <!-- Header -->
+  <div class="bg-gradient-to-br from-blue-600 to-blue-500 rounded-b-[40px] px-6 md:px-10 lg:px-16 pt-8 md:pt-10 pb-14 md:pb-16 relative">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-blue-100 text-sm md:text-base"></p>
+        <h1 class="text-white text-2xl md:text-3xl font-bold mt-1">Amir</h1>
+        <p class="text-blue-100 text-sm md:text-base mt-1">Find something you'll love today</p>
+      </div>
+      <button class="w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/20 border-2 border-white/60 flex items-center justify-center shrink-0">
+        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+    </div>
+
+    <!-- Search bar -->
+    <div class="mt-6 bg-white rounded-2xl px-4 py-3 flex items-center gap-3 shadow-sm md:max-w-md">
+      <svg class="w-5 h-5 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" placeholder="Search products, brands..." class="w-full text-sm outline-none placeholder:text-slate-400"/>
+    </div>
+  </div>
+
+  <!-- Stat cards -->
+  <div class="grid grid-cols-3 gap-3 md:gap-4 px-6 md:px-10 lg:px-16 -mt-8 md:-mt-9 relative z-10 md:max-w-lg">
+    <div class="bg-white rounded-2xl shadow-sm p-4 md:p-5 text-center">
+      <div class="w-9 h-9 mx-auto rounded-xl bg-blue-100 flex items-center justify-center mb-2">
+        <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      </div>
+      <p class="font-bold text-slate-800">12</p>
+      <p class="text-[11px] text-slate-400">Orders</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-sm p-4 md:p-5 text-center">
+      <div class="w-9 h-9 mx-auto rounded-xl bg-rose-100 flex items-center justify-center mb-2">
+        <svg class="w-4 h-4 text-rose-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 8.6c0 3.4-3.6 6-8.8 10.2C6.8 14.6 3.2 12 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"/></svg>
+      </div>
+      <p class="font-bold text-slate-800">7</p>
+      <p class="text-[11px] text-slate-400">Wishlist</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-sm p-4 md:p-5 text-center">
+      <div class="w-9 h-9 mx-auto rounded-xl bg-amber-100 flex items-center justify-center mb-2">
+        <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      </div>
+      <p class="font-bold text-slate-800">$34</p>
+      <p class="text-[11px] text-slate-400">Rewards</p>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="px-6 md:px-10 lg:px-16 mt-8">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-bold text-slate-800 md:text-lg">Categories</h2>
+      <span class="text-xs text-blue-600 font-medium">See all</span>
+    </div>
+    <div class="flex gap-3 md:gap-5 overflow-x-auto md:overflow-visible md:flex-wrap pb-1 -mx-1 px-1">
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">👟</div>
+        <span class="text-[11px] text-slate-600">Shoes</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">👕</div>
+        <span class="text-[11px] text-slate-600">Apparel</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">🎧</div>
+        <span class="text-[11px] text-slate-600">Audio</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">💄</div>
+        <span class="text-[11px] text-slate-600">Beauty</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">🏠</div>
+        <span class="text-[11px] text-slate-600">Home</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo banner -->
+  <div class="px-6 md:px-10 lg:px-16 mt-8">
+    <div class="bg-gradient-to-r from-indigo-600 to-blue-500 rounded-2xl p-5 md:p-8 flex items-center justify-between overflow-hidden relative">
+      <div class="relative z-10">
+        <span class="bg-white/20 text-white text-[11px] px-2 py-1 rounded-full">Limited time</span>
+        <h3 class="text-white font-bold text-lg md:text-2xl mt-2 leading-tight">30% off<br/>all sneakers</h3>
+        <button class="bg-white text-blue-600 text-xs md:text-sm font-semibold px-4 py-2 rounded-full mt-3">Shop now</button>
+      </div>
+      <span class="text-6xl md:text-8xl opacity-90">👟</span>
+    </div>
+  </div>
+
+  <!-- Popular products -->
+  <div class="px-6 md:px-10 lg:px-16 mt-8">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-bold text-slate-800 md:text-lg">Popular right now</h2>
+      <span class="text-xs text-blue-600 font-medium">See all</span>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">👟</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Runner Trail Low</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$89</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🎧</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Wireless Headset</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$59</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🧢</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Classic Cap</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$24</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🕶️</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Sun Shades</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$45</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom nav -->
+  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2.5rem)] max-w-sm md:max-w-md">
+    <div class="bg-white rounded-full shadow-lg flex items-center justify-between px-6 md:px-10 py-3">
+      <button class="flex flex-col items-center gap-1 text-blue-600">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+        <span class="text-[11px] font-medium">Home</span>
+      </button>
+      <button class="flex flex-col items-center gap-1 text-slate-400">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 6v13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+        <span class="text-[11px]">Shop</span>
+      </button>
+      <button class="flex flex-col items-center gap-1 text-slate-400 relative">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="text-[11px]">contact</span>
+        <span class="absolute -top-1 -right-2 bg-blue-600 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">3</span>
+      </button>
+      <button class="flex flex-col items-center gap-1 text-slate-400">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="text-[11px]">Profile</span>
+      </button>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

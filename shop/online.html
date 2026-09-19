@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>online shop</title>
+  <link rel="stylesheet" href="online.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- Top Navbar -->
+<nav class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-m md:max-w-6xl lg:max-w-8xl mx-auto px-6 md:px-10 lg:px-16 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-sm">🛍️</span>
+      <span class="font-bold text-slate-800 md:text-lg">Amir Online Shop</span>
+    </div>
+
+    <div class="hidden md:flex items-center gap-8 text-sm text-slate-600 font-medium">
+      <a href="#" class="text-blue-600">Home</a>
+      <a href="#" class="hover:text-blue-600">About</a>
+      <a href="#" class="hover:text-blue-600">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button class="hidden sm:flex w-11 h-11 rounded-full bg-slate-100 items-center justify-center">
+        <svg class="w-5 h-5 text-slate-500" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="relative w-11 h-11 rounded-full bg-slate-100 flex items-center justify-center">
+        <svg class="w-5 h-5 text-slate-500" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+      </button>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center">
+        <svg class="w-4 h-4 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 px-6 py-3">
+    <a href="#" class="block py-2 text-sm font-medium text-blue-600">Home</a>
+    <a href="#" class="block py-2 text-sm font-medium text-slate-600">About</a>
+    <a href="#" class="block py-2 text-sm font-medium text-slate-600">Contact</a>
+  </div>
+</nav>
+
+<div class="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto min-h-screen relative pb-28">
+
+  <!-- Header -->
+  <div class="bg-gradient-to-br from-blue-600 to-blue-500 rounded-b-[20px] px-10 md:px-10 lg:px-13 pt-6 md:pt-10 pb-12 md:pb-16 relative">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-blue-100 text-sm md:text-base"></p>
+        <h1 class="text-white text-2xl md:text-3xl font-bold mt-1">Amir</h1>
+        <p class="text-blue-100 text-sm md:text-base mt-1">Find something you'll love today</p>
+      </div>
+      <button class="w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/20 border-2 border-white/60 flex items-center justify-center shrink-0">
+        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search mt-6 bg-white rounded-2xl px-4 py-3 flex items-center gap-3 shadow-sm md:max-w-md">
+      <svg class="w-5 h-5 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+       <input type="text" placeholder="Search products, brands..." class="w-sm text-sm outline-none placeholder:text-slate-600"/>
+    </div>
+  </div>
+
+  
+  <!-- Stat cards -->
+  <div class="grid grid-cols-3 gap-3 md:gap-4 px-6 md:px-10 lg:px-16 -mt-8 md:-mt-9 relative z-10 md:max-w-lg">
+    <div class="bg-white rounded-2xl shadow-sm p-4 md:p-5 text-center">
+      <div class="w-9 h-9 mx-auto rounded-xl bg-blue-100 flex items-center justify-center mb-2">
+        <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      </div>
+      <p class="font-bold text-slate-800">12</p>
+      <p class="text-[11px] text-slate-400">Orders</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-sm p-4 md:p-5 text-center">
+      <div class="w-9 h-9 mx-auto rounded-xl bg-rose-100 flex items-center justify-center mb-2">
+        <svg class="w-4 h-4 text-rose-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 8.6c0 3.4-3.6 6-8.8 10.2C6.8 14.6 3.2 12 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"/></svg>
+      </div>
+      <p class="font-bold text-slate-800">7</p>
+      <p class="text-[11px] text-slate-400">Wishlist</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-sm p-4 md:p-5 text-center">
+      <div class="w-9 h-9 mx-auto rounded-xl bg-amber-100 flex items-center justify-center mb-2">
+        <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      </div>
+      <p class="font-bold text-slate-800">$34</p>
+      <p class="text-[11px] text-slate-400">Rewards</p>
+    </div>
+  </div>
+
+
+
+   <!-- Categories -->
+  <div class="px-6 md:px-10 lg:px-16 mt-8">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-bold text-slate-800 md:text-lg">Categories</h2>
+      <span class="text-xs text-blue-600 font-medium">See all</span>
+    </div>
+    <div class="flex gap-3 md:gap-5 overflow-x-auto md:overflow-visible md:flex-wrap pb-1 -mx-1 px-1">
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">👟</div>
+        <span class="text-[11px] text-slate-600">Shoes</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">⚽</div>
+        <span class="text-[11px] text-slate-600">Football</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">🎧</div>
+        <span class="text-[11px] text-slate-600">Audio</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">💄</div>
+        <span class="text-[11px] text-slate-600">Beauty</span>
+      </div>
+      <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">🥊</div>
+        <span class="text-[11px] text-slate-600">Boxing Gloves</span>
+      </div>
+       <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">🏋️‍♂️</div>
+        <span class="text-[11px] text-slate-600">GYM</span>
+      </div> <div class="shrink-0 flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">🤼‍♂️</div>
+        <span class="text-[11px] text-slate-600">Wrestling</span>
+      </div>
+    </div>
+  </div>
+
+<br> 
+<br>
+    <!-- Promo banner -->
+  <div class="px-3 md:px-5 lg:px-10 mt-10">
+    <div class="bg-gradient-to-r from-indigo-600 to-blue-500 rounded-3xl p-4 md:p-6 flex items-center justify-between overflow-hidden relative">
+      <div class="relative z-10">
+        <span class="bg-white/20 text-white text-[11px] px-2 py-1 rounded-full">Limited time</span>
+        <h3 class="text-white font-bold text-lg md:text-2xl mt-2 leading-tight">25% off<br/>VENUM</h3>
+        <button class="bg-white text-blue-600 text-xs md:text-sm font-semibold px-4 py-2 rounded-full mt-3">BUY NOW</button>
+      </div>
+      <span class="text-8xl md:text-8xl opacity-90">🥊</span>
+    </div>
+  </div>
+
+ 
+
+
+
+   <!-- Popular products -->
+  <div class="px-6 md:px-10 lg:px-16 mt-8">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-bold text-slate-800 md:text-lg">Popular right now</h2>
+      <span class="text-xs text-blue-600 font-medium">See all</span>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">👟</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Runner Trail Low</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$89</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🎧</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Wireless Headset</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$59</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🧢</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Classic Cap</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$24</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🤼‍♂️</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Wrestling </p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$50</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">⚽</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Football shoes </p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$130</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🏋️‍♂️</div>
+        <p class="text-sm font-medium text-slate-800 truncate">GYM</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$200</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm p-3">
+        <div class="h-24 rounded-xl bg-slate-100 flex items-center justify-center text-3xl mb-2">🕶️</div>
+        <p class="text-sm font-medium text-slate-800 truncate">Sun Shades</p>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm font-bold text-slate-900">$25</span>
+          <span class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg leading-none">+</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br> <br> 
+
+  <!--footer-->
+
+  <footer class="bg-slate-950 text-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+
+      <!-- Subscribe Section -->
+      <div
+        class="rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600
+               px-6 py-10 sm:px-10 lg:flex lg:items-center lg:justify-between"
+      >
+
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">
+            Subscribe to our newsletter
+          </h2>
+
+          <p class="mt-3 text-sm leading-6 text-blue-100 sm:text-base">
+            Get the latest news, updates and useful content directly
+            in your inbox.
+          </p>
+        </div>
+
+        <!-- Subscribe Form -->
+        <form class="mt-6 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:w-[450px]">
+
+          <label for="email" class="sr-only">
+            Email address
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            class="min-w-0 flex-1 rounded-lg border border-white/20
+                   bg-white px-4 py-3 text-gray-900
+                   outline-none placeholder:text-gray-400
+                   focus:ring-2 focus:ring-white"
+          >
+
+          <button
+            type="submit"
+            class="rounded-lg bg-slate-950 px-6 py-3
+                   font-semibold text-white
+                   transition duration-300
+                   hover:bg-slate-800
+                   active:scale-95"
+          >
+            Subscribe
+          </button>
+
+        </form>
+
+      </div>
+
+
+      <!-- Footer Main Content -->
+      <div
+        class="mt-16 grid grid-cols-1 gap-12
+               sm:grid-cols-2
+               lg:grid-cols-4"
+      >
+
+        <!-- Brand -->
+        <div class="sm:col-span-2 lg:col-span-1">
+
+          <a
+            href="#"
+            class="inline-block text-2xl font-bold tracking-tight"
+          >
+            Web<span class="text-blue-500">Component</span>
+          </a>
+
+          <p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+            We Try to make great goods that people trust.The best goods is oin there.And the best quility of thge world.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="mt-7 flex items-center gap-3">
+
+            <!-- Facebook -->
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="flex h-10 w-10 items-center justify-center
+                     rounded-full bg-slate-900
+                     text-slate-400
+                     transition duration-300
+                     hover:bg-blue-600 hover:text-white"
+            >
+              <img
+                src="facebook.svg"
+                alt="Facebook"
+                class="h-5 w-5"
+              >
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="flex h-10 w-10 items-center justify-center
+                     rounded-full bg-slate-900
+                     text-slate-400
+                     transition duration-300
+                     hover:bg-pink-600 hover:text-white"
+            >
+              <img
+                src="instagram.svg"
+                alt="Instagram"
+                class="h-5 w-5"
+              >
+            </a>
+
+            <!-- YouTube -->
+            <a
+              href="#"
+              aria-label="YouTube"
+              class="flex h-10 w-10 items-center justify-center
+                     rounded-full bg-slate-900
+                     text-slate-400
+                     transition duration-300
+                     hover:bg-red-600 hover:text-white"
+            >
+              <img
+                src="youtube.svg"
+                alt="YouTube"
+                class="h-5 w-5"
+              >
+            </a>
+
+            <!-- Twitter -->
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="flex h-10 w-10 items-center justify-center
+                     rounded-full bg-slate-900
+                     text-slate-400
+                     transition duration-300
+                     hover:bg-sky-500 hover:text-white"
+            >
+              <img
+                src="twitter.svg"
+                alt="Twitter"
+                class="h-5 w-5"
+              >
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Services -->
+        <div>
+
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+            Services
+          </h3>
+
+          <ul class="mt-6 space-y-4">
+
+
+              shoes
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                sport 
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- Company -->
+        <div>
+
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+            Company
+          </h3>
+
+          <ul class="mt-6 space-y-4">
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                About Us
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                Our Team
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                Careers
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- Resources -->
+        <div>
+
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+            Resources
+          </h3>
+
+          <ul class="mt-6 space-y-4">
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                Blog
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                Documentation
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                Help Center
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="text-sm text-slate-400 transition hover:text-white"
+              >
+                FAQ
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- Bottom -->
+      <div
+        class="mt-14 border-t border-slate-800 pt-8
+               flex flex-col gap-5
+               md:flex-row md:items-center md:justify-between"
+      >
+
+        <p class="text-sm text-slate-500">
+          © 2026 WebComponent. All rights reserved.
+        </p>
+
+        <div class="flex flex-wrap gap-5">
+
+          <a
+            href="#"
+            class="text-sm text-slate-500 transition hover:text-white"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            href="#"
+            class="text-sm text-slate-500 transition hover:text-white"
+          >
+            Terms of Service
+          </a>
+
+          <a
+            href="#"
+            class="text-sm text-slate-500 transition hover:text-white"
+          >
+            Cookies
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
