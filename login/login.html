@@ -62,7 +62,7 @@
                 <button
                     id="studentBtn"
                     onclick="selectRole('student')"
-                    class="flex-1 h-20 rounded-[25px] bg-blue-500 text-white flex items-center justify-center gap-3 text-xl font-semibold shadow-sm"
+                    class="flex-1 h-12 rounded-[25px] bg-blue-500 text-white flex items-center justify-center gap-3 text-xl font-semibold shadow-sm"
                 >
                     <i class="fa-solid fa-graduation-cap"></i>
                     Student
@@ -72,7 +72,7 @@
                 <button
                     id="teacherBtn"
                     onclick="selectRole('teacher')"
-                    class="flex-1 h-20 rounded-[25px] text-gray-500 flex items-center justify-center gap-3 text-xl font-semibold"
+                    class="flex-1 h-12 rounded-[25px] text-gray-500 flex items-center justify-center gap-3 text-xl font-semibold"
                 >
                     <i class="fa-solid fa-user"></i>
                     Teacher
@@ -87,7 +87,7 @@
         <form class="max-w-xl mx-auto mt-14">
 
             <!-- Email -->
-            <div class="h-28 bg-white rounded-[30px] flex items-center px-8">
+            <div class="h-16 bg-white rounded-[30px] flex items-center px-8">
 
                 <i class="fa-regular fa-envelope text-blue-500 text-3xl w-12"></i>
 
@@ -101,7 +101,7 @@
 
 
             <!-- Password -->
-            <div class="h-28 bg-white rounded-[30px] flex items-center px-8 mt-7">
+            <div class="h-16 bg-white rounded-[30px] flex items-center px-8 mt-7">
 
                 <i class="fa-solid fa-lock text-blue-500 text-3xl w-12"></i>
 
@@ -137,7 +137,7 @@
             <!-- Login -->
             <button
                 type="submit"
-                class="w-full h-28 mt-10 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-2xl font-semibold shadow-lg"
+                class="w-full h-16 mt-10 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-2xl font-semibold shadow-lg"
             >
                 Login
             </button>
@@ -160,84 +160,6 @@
         </form>
 
     </main>
-
-
-    <script>
-
-        function togglePassword() {
-
-            const password = document.getElementById("password");
-            const icon = document.getElementById("eyeIcon");
-
-            if (password.type === "password") {
-
-                password.type = "text";
-
-                icon.classList.remove("fa-eye-slash");
-                icon.classList.add("fa-eye");
-
-            } else {
-
-                password.type = "password";
-
-                icon.classList.remove("fa-eye");
-                icon.classList.add("fa-eye-slash");
-
-            }
-
-        }
-
-
-        function selectRole(role) {
-
-            const studentBtn = document.getElementById("studentBtn");
-            const teacherBtn = document.getElementById("teacherBtn");
-
-            if (role === "student") {
-
-                studentBtn.classList.add(
-                    "bg-blue-500",
-                    "text-white"
-                );
-
-                studentBtn.classList.remove(
-                    "text-gray-500"
-                );
-
-                teacherBtn.classList.remove(
-                    "bg-blue-500",
-                    "text-white"
-                );
-
-                teacherBtn.classList.add(
-                    "text-gray-500"
-                );
-
-            } else {
-
-                teacherBtn.classList.add(
-                    "bg-blue-500",
-                    "text-white"
-                );
-
-                teacherBtn.classList.remove(
-                    "text-gray-500"
-                );
-
-                studentBtn.classList.remove(
-                    "bg-blue-500",
-                    "text-white"
-                );
-
-                studentBtn.classList.add(
-                    "text-gray-500"
-                );
-
-            }
-
-        }
-
-    </script>
 
 </body>
 </html>
