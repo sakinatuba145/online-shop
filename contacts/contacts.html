@@ -3,299 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>AfghanGeeks - Customer Registration</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="min-h-screen bg-white text-gray-900">
-
+<body class="bg-white text-gray-900">
 
   <main class="min-h-screen flex flex-col lg:flex-row">
 
-    <section
-      class="w-full lg:w-[60%] xl:w-[62%]
-             bg-[#f5f5ff]
-             px-4 sm:px-6 md:px-10 lg:px-8 xl:px-12
-             py-8 sm:py-10 lg:py-14
-             flex justify-center items-start"
-    >
+    <section class="w-full bg-[#f5f5ff] px-4 py-8 sm:px-6 md:px-10 lg:w-3/5 lg:px-8 lg:py-14">
+      <div class="mx-auto w-full max-w-2xl rounded-xl bg-white p-6 shadow-sm sm:p-8 lg:p-10">
 
-      <div
-        class="w-full max-w-2xl
-               bg-white
-               rounded-xl
-               shadow-sm
-               px-5 sm:px-8 md:px-10 lg:px-8 xl:px-12
-               py-7 sm:py-9 md:py-10"
-      >
-
-        <div class="mb-8 sm:mb-10">
-
-          <h1 class="text-xl sm:text-2xl md:text-[26px] font-bold">
-            New Customer Registration Form
-          </h1>
-
-          <p class="text-xs sm:text-sm text-gray-400 mt-2">
+        <div class="mb-8">
+          <h1 class="text-2xl font-bold">New Customer Registration Form</h1>
+          <p class="mt-2 text-sm text-gray-400">
             AfghanGeeks Customer Registration
           </p>
-
         </div>
 
-
         <form>
-
-          <h2 class="text-sm sm:text-base font-semibold mb-6">
-            Customer Details:
-          </h2>
-
+          <h2 class="mb-6 font-semibold">Customer Details:</h2>
 
           <div class="mb-6">
-
-            <label class="block text-sm font-semibold mb-3">
-              Full Name
-              <span class="text-red-500">*</span>
+            <label class="mb-3 block text-sm font-semibold">
+              Full Name <span class="text-red-500">*</span>
             </label>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <input
                   type="text"
                   value="Hoor"
-                  class="w-full h-11 sm:h-12
-                         border border-gray-200
-                         rounded-md
-                         px-3
-                         text-sm
-                         outline-none
-                         transition
-                         focus:border-blue-500
-                         focus:ring-1 focus:ring-blue-500"
+                  class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 >
-
-                <p class="text-xs text-gray-400 mt-2">
-                  First Name
-                </p>
+                <p class="mt-2 text-xs text-gray-400">First Name</p>
               </div>
-
 
               <div>
                 <input
                   type="text"
                   value="Faizy"
-                  class="w-full h-11 sm:h-12
-                         border border-gray-200
-                         rounded-md
-                         px-3
-                         text-sm
-                         outline-none
-                         transition
-                         focus:border-blue-500
-                         focus:ring-1 focus:ring-blue-500"
+                  class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 >
-
-                <p class="text-xs text-gray-400 mt-2">
-                  Last Name
-                </p>
+                <p class="mt-2 text-xs text-gray-400">Last Name</p>
               </div>
-
             </div>
-
           </div>
 
-
           <div class="mb-6">
-
-            <label class="block text-sm font-semibold mb-3">
-              Company Name
-              <span class="text-red-500">*</span>
+            <label class="mb-3 block text-sm font-semibold">
+              Company Name <span class="text-red-500">*</span>
             </label>
 
             <input
               type="text"
               value="AfghanGeeks"
-              class="w-full h-11 sm:h-12
-                     border border-gray-200
-                     rounded-md
-                     px-3
-                     text-sm
-                     outline-none
-                     transition
-                     focus:border-blue-500
-                     focus:ring-1 focus:ring-blue-500"
+              class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             >
-
           </div>
 
-
           <div class="mb-6">
-
-            <label class="block text-sm font-semibold mb-3">
-              Email Address
-              <span class="text-red-500">*</span>
+            <label class="mb-3 block text-sm font-semibold">
+              Email Address <span class="text-red-500">*</span>
             </label>
 
             <input
               type="email"
               placeholder="hoor@afghangeeks.com"
-              class="w-full h-11 sm:h-12
-                     border border-gray-200
-                     rounded-md
-                     px-3
-                     text-sm
-                     outline-none
-                     transition
-                     focus:border-blue-500
-                     focus:ring-1 focus:ring-blue-500"
+              class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             >
 
-            <p class="text-xs text-gray-400 mt-2">
-              Example: hoor@afghangeeks.com
+            <p class="mt-2 text-xs text-gray-400">
+              Example: hoor@faizy.com
             </p>
-
           </div>
 
-
           <div class="mb-6">
-
-            <label class="block text-sm font-semibold mb-3">
+            <label class="mb-3 block text-sm font-semibold">
               Phone Number
             </label>
 
             <input
               type="tel"
               placeholder="+93 XXX XXX XXX"
-              class="w-full h-11 sm:h-12
-                     border border-gray-200
-                     rounded-md
-                     px-3
-                     text-sm
-                     outline-none
-                     transition
-                     focus:border-blue-500
-                     focus:ring-1 focus:ring-blue-500"
+              class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             >
-
           </div>
 
-
           <div class="mb-6">
-
-            <label class="block text-sm font-semibold mb-3">
-              Address
-              <span class="text-red-500">*</span>
+            <label class="mb-3 block text-sm font-semibold">
+              Address <span class="text-red-500">*</span>
             </label>
 
             <input
               type="text"
               placeholder="Street Address"
-              class="w-full h-11 sm:h-12
-                     border border-gray-200
-                     rounded-md
-                     px-3
-                     text-sm
-                     outline-none
-                     transition
-                     focus:border-blue-500
-                     focus:ring-1 focus:ring-blue-500"
+              class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             >
 
-            <p class="text-xs text-gray-400 mt-2">
-              Street Address
-            </p>
-
+            <p class="mt-2 text-xs text-gray-400">Street Address</p>
           </div>
 
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-7">
-
+          <div class="mb-7 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-
               <input
                 type="text"
                 value="Kabul"
-                class="w-full h-11 sm:h-12
-                       border border-gray-200
-                       rounded-md
-                       px-3
-                       text-sm
-                       outline-none
-                       transition
-                       focus:border-blue-500
-                       focus:ring-1 focus:ring-blue-500"
+                class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               >
-
-              <p class="text-xs text-gray-400 mt-2">
-                City
-              </p>
-
+              <p class="mt-2 text-xs text-gray-400">City</p>
             </div>
 
-
             <div>
-
               <input
                 type="text"
                 value="Afghanistan"
-                class="w-full h-11 sm:h-12
-                       border border-gray-200
-                       rounded-md
-                       px-3
-                       text-sm
-                       outline-none
-                       transition
-                       focus:border-blue-500
-                       focus:ring-1 focus:ring-blue-500"
+                class="h-12 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               >
-
-              <p class="text-xs text-gray-400 mt-2">
-                Country
-              </p>
-
+              <p class="mt-2 text-xs text-gray-400">Country</p>
             </div>
-
           </div>
-
 
           <button
             type="submit"
-            class="w-full sm:w-auto
-                   bg-blue-600
-                   hover:bg-blue-700
-                   text-white
-                   text-sm
-                   font-semibold
-                   px-8 py-3
-                   rounded-md
-                   transition"
+            class="w-full rounded-md bg-blue-600 px-8 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto"
           >
             Register Customer
           </button>
-
         </form>
-
       </div>
-
     </section>
 
 
+    <aside class="w-full px-5 py-8 sm:px-8 md:px-12 lg:w-2/5 lg:px-10 lg:py-12">
+      <div class="mx-auto w-full max-w-xl">
 
-    <aside
-      class="w-full lg:w-[40%] xl:w-[38%]
-             px-5 sm:px-8 md:px-12 lg:px-8 xl:px-12 2xl:px-16
-             py-8 sm:py-10 lg:py-12"
-    >
-
-      <div class="w-full max-w-xl mx-auto lg:max-w-none">
-
-
-        <div class="relative mb-8 lg:mb-10">
-
+        <div class="relative mb-10">
           <svg
-            class="absolute left-4 top-1/2 -translate-y-1/2
-                   w-4 h-4 text-gray-400"
+            class="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -312,236 +157,89 @@
           <input
             type="search"
             placeholder="Search in Form Templates"
-            class="w-full h-11
-                   border border-gray-300
-                   rounded-md
-                   pl-11 pr-4
-                   text-sm
-                   outline-none
-                   focus:border-blue-500"
+            class="h-11 w-full rounded-md border border-gray-300 pl-11 pr-4 text-sm outline-none focus:border-blue-500"
           >
-
         </div>
 
-
-        <div
-          class="flex flex-wrap items-center gap-1
-                 text-xs sm:text-sm
-                 text-gray-400
-                 mb-4"
-        >
-
-          <a
-            href="#"
-            class="text-blue-600 hover:underline"
-          >
-            Home
-          </a>
-
+        <div class="mb-4 flex flex-wrap items-center gap-2 text-sm text-gray-400">
+          <a href="#" class="text-blue-600 hover:underline">Home</a>
           <span>/</span>
-
-          <a
-            href="#"
-            class="hover:text-blue-600"
-          >
-            Customer Forms
-          </a>
-
+          <a href="#" class="hover:text-blue-600">Customer Forms</a>
           <span>/</span>
-
-          <a
-            href="#"
-            class="hover:text-blue-600"
-          >
-            Registration
-          </a>
-
+          <a href="#" class="hover:text-blue-600">Registration</a>
         </div>
 
-
-        <h1
-          class="text-2xl sm:text-3xl xl:text-[34px]
-                 leading-tight
-                 font-bold
-                 mb-5"
-        >
-          New Customer
-          <br class="hidden sm:block">
+        <h1 class="mb-5 text-3xl font-bold leading-tight">
+          New Customer<br class="hidden sm:block">
           Registration Form
         </h1>
 
-
-        <p
-          class="text-sm sm:text-[15px]
-                 text-gray-500
-                 leading-6
-                 mb-3"
-        >
-          Register new customers and collect their contact
-          and business information.
+        <p class="mb-3 text-sm leading-6 text-gray-500">
+          Register new customers and collect their contact and business
+          information.
         </p>
 
-        <p
-          class="text-sm sm:text-[15px]
-                 text-gray-500
-                 leading-6
-                 mb-7"
-        >
+        <p class="mb-7 text-sm leading-6 text-gray-500">
           This customer registration form is prepared for
-          <strong class="text-gray-700">
-            AfghanGeeks
-          </strong>.
+          <strong class="text-gray-700">AfghanGeeks</strong>.
         </p>
-
 
         <button
-          class="w-full
-                 bg-blue-600
-                 hover:bg-blue-700
-                 text-white
-                 text-sm
-                 font-semibold
-                 py-3.5 sm:py-4
-                 rounded-md
-                 transition"
+          type="button"
+          class="w-full rounded-md bg-blue-600 py-4 text-sm font-semibold text-white transition hover:bg-blue-700"
         >
           Use Template
         </button>
 
 
-
-        <div class="mt-10 sm:mt-12 lg:mt-14">
-
-          <h2 class="font-bold text-base mb-5">
-            Customer Information
-          </h2>
-
+        <div class="mt-12">
+          <h2 class="mb-5 font-bold">Customer Information</h2>
 
           <div class="text-sm">
 
-            <div
-              class="flex flex-col sm:flex-row
-                     sm:items-center
-                     sm:justify-between
-                     gap-1
-                     border-b border-gray-100
-                     py-3"
-            >
-              <span class="text-gray-400">
-                Customer
-              </span>
-
-              <span class="font-medium">
-                Hoor Faizy
-              </span>
+            <div class="flex justify-between border-b border-gray-100 py-3">
+              <span class="text-gray-400">Customer</span>
+              <span class="font-medium">Hoor Faizy</span>
             </div>
 
-
-            <div
-              class="flex flex-col sm:flex-row
-                     sm:items-center
-                     sm:justify-between
-                     gap-1
-                     border-b border-gray-100
-                     py-3"
-            >
-              <span class="text-gray-400">
-                Company
-              </span>
-
-              <span class="font-medium">
-                AfghanGeeks
-              </span>
+            <div class="flex justify-between border-b border-gray-100 py-3">
+              <span class="text-gray-400">Company</span>
+              <span class="font-medium">AfghanGeeks</span>
             </div>
 
-
-            <div
-              class="flex flex-col sm:flex-row
-                     sm:items-center
-                     sm:justify-between
-                     gap-1
-                     border-b border-gray-100
-                     py-3"
-            >
-              <span class="text-gray-400">
-                Location
-              </span>
-
-              <span class="font-medium">
-                Afghanistan
-              </span>
+            <div class="flex justify-between border-b border-gray-100 py-3">
+              <span class="text-gray-400">Location</span>
+              <span class="font-medium">Afghanistan</span>
             </div>
 
-
-            <div
-              class="flex flex-col sm:flex-row
-                     sm:items-center
-                     sm:justify-between
-                     gap-1
-                     border-b border-gray-100
-                     py-3"
-            >
-              <span class="text-gray-400">
-                Form Type
-              </span>
-
-              <span class="font-medium">
-                Registration
-              </span>
+            <div class="flex justify-between border-b border-gray-100 py-3">
+              <span class="text-gray-400">Form Type</span>
+              <span class="font-medium">Registration</span>
             </div>
 
           </div>
-
         </div>
 
 
-
-        <!-- CATEGORIES -->
         <div class="mt-10">
-
-          <h2 class="font-bold text-base mb-4">
-            Categories
-          </h2>
-          
+          <h2 class="mb-4 font-bold">Categories</h2>
 
           <div class="flex flex-wrap gap-2">
-
-            <span
-              class="bg-gray-100
-                     text-gray-500
-                     text-xs
-                     px-3 py-2
-                     rounded-md"
-            >
+            <span class="rounded-md bg-gray-100 px-3 py-2 text-xs text-gray-500">
               Customer Forms
             </span>
 
-            <span
-              class="bg-gray-100
-                     text-gray-500
-                     text-xs
-                     px-3 py-2
-                     rounded-md"
-            >
+            <span class="rounded-md bg-gray-100 px-3 py-2 text-xs text-gray-500">
               Registration Forms
             </span>
 
-            <span
-              class="bg-gray-100
-                     text-gray-500
-                     text-xs
-                     px-3 py-2
-                     rounded-md"
-            >
+            <span class="rounded-md bg-gray-100 px-3 py-2 text-xs text-gray-500">
               Business Forms
             </span>
-
           </div>
-
         </div>
 
       </div>
-
     </aside>
 
   </main>
