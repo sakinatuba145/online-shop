@@ -37,14 +37,14 @@
   </head>
 
   <body
-    class="min-h-screen bg-gradient-to-br from-sky-100 via-sky-200 to-blue-400"
+    class="min-h-screen bg-blue-50"
   >
     <main class="min-h-screen px-5 py-10">
       <!-- Header -->
       <section class="text-center pt-5">
-        <h1 class="title-font text-5xl text-black">Create Account</h1>
+        <h1 class="title-font text-3xl text-black">Create Account</h1>
 
-        <p class="mt-4 text-xl text-gray-600">
+        <p class="mt-4 text-lg text-gray-600">
           Start your learning journey today
         </p>
       </section>
@@ -53,41 +53,41 @@
       <form class="max-w-xl mx-auto mt-16">
         <!-- Full Name -->
         <div class="h-16 bg-white rounded-[30px] flex items-center px-8">
-          <i class="fa-solid fa-user text-blue-500 text-3xl w-12"></i>
+          <i class="fa-solid fa-user text-blue-500 text-xl w-12"></i>
 
           <input
             type="text"
             placeholder="Full name"
-            class="w-full outline-none bg-transparent text-xl text-gray-700 placeholder-gray-500"
+            class="w-full outline-none bg-transparent text-lg text-gray-700 placeholder-gray-500"
           />
         </div>
 
         <!-- Email -->
         <div class="h-16 bg-white rounded-[30px] flex items-center px-8 mt-7">
-          <i class="fa-regular fa-envelope text-blue-500 text-3xl w-12"></i>
+          <i class="fa-regular fa-envelope text-blue-500 text-xl w-12"></i>
 
           <input
             type="email"
             placeholder="Email"
-            class="w-full outline-none bg-transparent text-xl text-gray-700 placeholder-gray-500"
+            class="w-full outline-none bg-transparent text-lg text-gray-700 placeholder-gray-500"
           />
         </div>
 
         <!-- Password -->
         <div class="h-16 bg-white rounded-[30px] flex items-center px-8 mt-7">
-          <i class="fa-solid fa-lock text-blue-500 text-3xl w-12"></i>
+          <i class="fa-solid fa-lock text-blue-500 text-xl w-12"></i>
 
           <input
             id="password"
             type="password"
             placeholder="Password"
-            class="w-full outline-none bg-transparent text-xl text-gray-700 placeholder-gray-500"
+            class="w-full outline-none bg-transparent text-lg text-gray-700 placeholder-gray-500"
           />
 
           <button
             type="button"
             onclick="togglePassword()"
-            class="text-blue-500 text-2xl ml-3"
+            class="text-blue-500 text-xl ml-3"
           >
             <i id="eyeIcon" class="fa-solid fa-eye-slash"></i>
           </button>
@@ -95,23 +95,25 @@
 
         <!-- Role -->
         <div class="h-16 bg-white rounded-[30px] flex items-center px-8 mt-7">
-          <i class="fa-solid fa-graduation-cap text-blue-500 text-3xl w-12"></i>
+          <i class="fa-solid fa-graduation-cap text-blue-500 text-xl w-12"></i>
 
           <select
-            class="w-full outline-none bg-transparent text-xl title-font font-semibold text-black appearance-none cursor-pointer"
+            class="w-full outline-none bg-transparent text-lg title-font font-semibold text-black appearance-none cursor-pointer"
           >
             <option>Student</option>
 
             <option>Teacher</option>
           </select>
 
-          <i class="fa-solid fa-caret-down text-gray-600 text-xl"></i>
+          <i class="fa-solid fa-caret-down text-gray-600 text-xl">
+            
+          </i>
         </div>
 
         <!-- Create Account -->
         <button
           type="submit"
-          class="w-full h-16 mt-12 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-2xl font-semibold shadow-lg"
+          class="w-full h-16 mt-12 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-lg font-semibold shadow-lg"
         >
           Create Account
         </button>
@@ -128,7 +130,7 @@
         <!-- Google -->
         <button
           type="button"
-          class="w-full h-16 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-2xl font-semibold flex items-center justify-center gap-5 shadow-lg"
+          class="w-full h-16 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-lg font-semibold flex items-center justify-center gap-5 shadow-lg"
         >
           <span class="font-bold"> G </span>
 
@@ -136,7 +138,7 @@
         </button>
 
         <!-- Login -->
-        <p class="text-center text-white text-xl font-semibold mt-14">
+        <p class="text-center text-blue-500 text-lg font-semibold mt-14">
           Already have an account?
 
           <a href="login.html" class="hover:underline"> Login </a>
