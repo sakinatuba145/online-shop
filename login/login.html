@@ -32,54 +32,40 @@
         .title-font {
             font-family: "Playfair Display", serif;
         }
+        body {
+            background:
+                radial-gradient(circle at 10% 5%, rgba(59,130,246,.30), transparent 38%),
+                radial-gradient(circle at 92% 45%, rgba(129,140,248,.28), transparent 40%),
+                radial-gradient(circle at 15% 95%, rgba(56,189,248,.28), transparent 40%),
+                linear-gradient(180deg, #e6f0ff 0%, #f7faff 50%, #e3ecff 100%);
+        }
+        .spark {
+            position: absolute;
+            background: #bfdbfe;
+            opacity: .85;
+            clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+        }
     </style>
-</head>
 
-<body class="min-h-screen bg-blue-50">
-
-    <main class="min-h-screen px-5 py-10">
+<body class="min-h-screen relative overflow-x-hidden">
+<div class="spark" style="top: 60px; left: 20px; width: 70px; height: 70px;"></div>
+<div class="spark" style="bottom: 90px; right: 20px; width: 90px; height: 90px;"></div>
+  
+    <main class="relative min-h-screen px-5 py-10">
+        
 
         <!-- Header -->
         <section class="text-center pt-10">
 
-            <h1 class="title-font text-3xl font-bold text-black">
-                Welcome back
-            </h1>
+    <h1 class="title-font text-3xl font-bold text-black">
+        Welcome to Online Shop
+    </h1>
 
-            <p class="mt-3 text-lg text-gray-600">
-                Continue your learning journey
-            </p>
+    <p class="mt-3 text-lg text-gray-600">
+        Login to start shopping
+    </p>
 
         </section>
-
-        <!-- Student / Teacher -->
-        <div class="max-w-xl mx-auto mt-14">
-
-            <div class="bg-white/70 rounded-[32px] p-2 flex">
-
-                <!-- Student -->
-                <button
-                    id="studentBtn"
-                    onclick="selectRole('student')"
-                    class="flex-1 h-12 rounded-[25px] bg-blue-500 text-white flex items-center justify-center gap-3 text-lg font-semibold shadow-sm"
-                >
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    Student
-                </button>
-
-                <!-- Teacher -->
-                <button
-                    id="teacherBtn"
-                    onclick="selectRole('teacher')"
-                    class="flex-1 h-12 rounded-[25px] text-gray-500 flex items-center justify-center gap-3 text-lg font-semibold"
-                >
-                    <i class="fa-solid fa-user"></i>
-                    Teacher
-                </button>
-
-            </div>
-
-        </div>
 
         <!-- Form -->
         <form class="max-w-xl mx-auto mt-14">
@@ -131,13 +117,15 @@
 
             </div>
             <!-- Login -->
-            <button
-                type="submit"
-                class="w-full h-16 mt-10 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-xl font-semibold shadow-lg"
-            >
-                Login
-            </button>
-
+    
+            
+            <a
+    href="../home/amir.html"
+    class="block w-full h-16 mt-10 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-xl font-semibold shadow-lg flex items-center justify-center"
+>
+    Login
+</a>
+            
             <!-- Register -->
             <p class="text-center text-blue-500 text-lg font-semibold mt-14">
 
@@ -158,4 +146,3 @@
 
 </body>
 </html>
-
