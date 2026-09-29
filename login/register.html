@@ -1,150 +1,261 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Create Account</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Online Shop - Register</title>
 
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
-      body {
-        font-family: "DM Sans", sans-serif;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      .title-font {
-        font-family: "Playfair Display", serif;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef8ff, #dff2ff);
+            min-height: 100vh;
+        }
+
+        .register-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .register-card {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 80, 150, 0.15);
+        }
+
+        .logo {
+            text-align: center;
+            color: #1677d2;
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .logo i {
+            margin-right: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #123b5d;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            height: 58px;
+            border: 1px solid #d8e5ee;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 17px;
+            background: #fafdff;
+            transition: 0.3s;
+        }
+
+        .input-box i {
+            color: #1677d2;
+            width: 30px;
+            font-size: 17px;
+        }
+
+        .input-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input-box:focus-within {
+            border-color: #1677d2;
+            box-shadow: 0 0 0 3px rgba(22, 119, 210, 0.1);
+        }
+
+        .register-btn,
+        .google-btn {
+            width: 100%;
+            height: 58px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .register-btn {
+            background: #1677d2;
+            color: white;
+            margin-top: 10px;
+            box-shadow: 0 8px 18px rgba(22, 119, 210, 0.25);
+        }
+
+        .register-btn:hover {
+            background: #07528a;
+            transform: translateY(-2px);
+        }
+
+        .or {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 28px 0;
+        }
+
+        .or span {
+            flex: 1;
+            height: 1px;
+            background: #d9e3ea;
+        }
+
+        .or p {
+            color: #888;
+        }
+
+        .google-btn {
+            background: white;
+            color: #333;
+            border: 1px solid #d8e5ee;
+        }
+
+        .google-btn i {
+            color: #1677d2;
+            margin-right: 8px;
+        }
+
+        .google-btn:hover {
+            background: #f3f9ff;
+            border-color: #1677d2;
+        }
+
+        .login-text {
+            text-align: center;
+            margin-top: 25px;
+            color: #777;
+        }
+
+        .login-text a {
+            color: #1677d2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .register-card {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body
-    class="min-h-screen bg-blue-50"
-  >
-    <main class="min-h-screen px-5 py-10">
-      <!-- Header -->
-      <section class="text-center pt-5">
-        <h1 class="title-font text-3xl text-black">Create Account</h1>
+<body>
 
-        <p class="mt-4 text-lg text-gray-600">
-          Start your learning journey today
-        </p>
-      </section>
+    <div class="register-container">
 
-      <!-- Form -->
-      <form class="max-w-xl mx-auto mt-16">
-        <!-- Full Name -->
-        <div class="h-16 bg-white rounded-[30px] flex items-center px-8">
-          <i class="fa-solid fa-user text-blue-500 text-xl w-12"></i>
+        <div class="register-card">
 
-          <input
-            type="text"
-            placeholder="Full name"
-            class="w-full outline-none bg-transparent text-lg text-gray-700 placeholder-gray-500"
-          />
+            <div class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Online Shop
+            </div>
+
+            <h1>Create Your Account</h1>
+
+            <p class="subtitle">
+                Join us and enjoy a simple and easy shopping experience.
+            </p>
+
+            <form>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" placeholder="Phone Number">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+
+                <button type="submit" class="register-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="or">
+                <span></span>
+                <p>Or</p>
+                <span></span>
+            </div>
+
+            <button class="google-btn" type="button">
+                <i class="fa-brands fa-google"></i>
+                Continue with Google
+            </button>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
         </div>
 
-        <!-- Email -->
-        <div class="h-16 bg-white rounded-[30px] flex items-center px-8 mt-7">
-          <i class="fa-regular fa-envelope text-blue-500 text-xl w-12"></i>
+    </div>
 
-          <input
-            type="email"
-            placeholder="Email"
-            class="w-full outline-none bg-transparent text-lg text-gray-700 placeholder-gray-500"
-          />
-        </div>
-
-        <!-- Password -->
-        <div class="h-16 bg-white rounded-[30px] flex items-center px-8 mt-7">
-          <i class="fa-solid fa-lock text-blue-500 text-xl w-12"></i>
-
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            class="w-full outline-none bg-transparent text-lg text-gray-700 placeholder-gray-500"
-          />
-
-          <button
-            type="button"
-            onclick="togglePassword()"
-            class="text-blue-500 text-xl ml-3"
-          >
-            <i id="eyeIcon" class="fa-solid fa-eye-slash"></i>
-          </button>
-        </div>
-
-        <!-- Role -->
-        <div class="h-16 bg-white rounded-[30px] flex items-center px-8 mt-7">
-          <i class="fa-solid fa-graduation-cap text-blue-500 text-xl w-12"></i>
-
-          <select
-            class="w-full outline-none bg-transparent text-lg title-font font-semibold text-black appearance-none cursor-pointer"
-          >
-            <option>Student</option>
-
-            <option>Teacher</option>
-          </select>
-
-          <i class="fa-solid fa-caret-down text-gray-600 text-xl">
-            
-          </i>
-        </div>
-
-        <!-- Create Account -->
-        <button
-          type="submit"
-          class="w-full h-16 mt-12 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-lg font-semibold shadow-lg"
-        >
-          Create Account
-        </button>
-
-        <!-- OR -->
-        <div class="flex items-center gap-5 my-10">
-          <div class="flex-1 h-px bg-white/80"></div>
-
-          <span class="text-gray-600 text-xl"> Or </span>
-
-          <div class="flex-1 h-px bg-white/80"></div>
-        </div>
-
-        <!-- Google -->
-        <button
-          type="button"
-          class="w-full h-16 rounded-[30px] bg-blue-500 hover:bg-blue-600 transition text-white text-lg font-semibold flex items-center justify-center gap-5 shadow-lg"
-        >
-          <span class="font-bold"> G </span>
-
-          Continue with Google
-        </button>
-
-        <!-- Login -->
-        <p class="text-center text-blue-500 text-lg font-semibold mt-14">
-          Already have an account?
-
-          <a href="login.html" class="hover:underline"> Login </a>
-        </p>
-      </form>
-    </main>
-  </body>
+</body>
 </html>
